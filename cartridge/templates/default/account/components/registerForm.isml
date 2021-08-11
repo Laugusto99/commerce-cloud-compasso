@@ -6,7 +6,7 @@
     <div class="form-group
         <isif condition="${!!pdict.profileForm.customer.firstname.mandatory === true}">required</isif>">
         <label class="form-control-label" for="registration-form-fname">
-           kglkjhkjlhkjlhkjlkjhkjhkljhkjh
+           <isprint value="${pdict.profileForm.customer.firstname.label}" encoding="htmlcontent" />
         </label>
         <input
             type="text"
