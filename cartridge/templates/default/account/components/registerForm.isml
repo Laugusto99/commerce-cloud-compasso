@@ -36,19 +36,19 @@
     </div>
 
     <div class="form-group
-        <isif condition="${!!pdict.profileForm.customer.lastname.mandatory === true}">required</isif>">
-        <label class="form-control-label" for="registration-form-lname">
-            CPF
+        <isif condition="${!!pdict.profileForm.customer.cpfLucas.mandatory === true}">required</isif>">
+        <label class="form-control-label" for="registration-form-cpfLucas">
+            <isprint value="${pdict.profileForm.customer.cpfLucas.label}" encoding="htmlcontent" />
         </label>
         <input
             type="text"
             class="form-control"
-            id="registration-form-lname"
+            id="registration-form-cpfLucas"
             data-missing-error="${Resource.msg('error.message.required','forms',null)}"
             data-range-error="${Resource.msg('error.message.50orless','forms',null)}"
-            aria-describedby="form-lname-error"
-            <isprint value=${pdict.profileForm.customer.lastname.attributes} encoding="off" />>
-        <div class="invalid-feedback" id="form-lname-error"></div>
+            aria-describedby="form-cpfLucas-error"
+            <isprint value=${pdict.profileForm.customer.cpfLucas.attributes} encoding="off" />>
+        <div class="invalid-feedback" id="form-cpfLucas-error"></div>
     </div>
 
     <div class="form-group
