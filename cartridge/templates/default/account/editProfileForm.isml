@@ -29,7 +29,7 @@
             <isprint value="${pdict.profileForm.customer.cpfLucas.attributes}" encoding="off" />>
         <div class="invalid-feedback"></div>
     </div>
-
+    
     <div class="form-group
         <isif condition="${pdict.profileForm.customer.phone.mandatory === true}">required</isif>">
         <label class="form-control-label" for="phone">

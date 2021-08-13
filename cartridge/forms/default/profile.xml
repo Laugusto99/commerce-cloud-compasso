@@ -23,11 +23,11 @@
 			formid="cpfLucas" 
 			label="label.input.cpfLucas.profile" 
 			mandatory="true" 
-			max-length="11" 
+			max-length="14" 
 			missing-error="error.message.required"
 			parse-error="error.message.parse.cpfLucas.profile.form"
-			range-error="error.message.50orless"
-			regexp="^/(\d{3})(\d{3})(\d{3})(\d{2})/$" 
+			range-error="error.message.14orless"
+			
 			value-error="ValueErrorText"
 			type="string"/> 	
 
