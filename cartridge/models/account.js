@@ -11,12 +11,18 @@ var Customer = require('dw/customer/Customer');
  */
 function getProfile(profile) {
   var result;
+
+  var CustomerMgr = require('dw/customer/CustomerMgr');
+  var profileCustom = CustomerMgr.getCustomerByLogin(profile.email);
+
+  profileCustom = profileCustom.getProfile();
+  
   if (profile) {
     result = {
       firstName: profile.firstName,
       lastName: profile.lastName,
+      cpfLucas: profileCustom.custom.cpfLucas,
       email: profile.email,
-      cpfLucas: profile.cpfLucas,
       phone: Object.prototype.hasOwnProperty.call(profile, 'phone') ? profile.phone : profile.phoneHome,
       password: '********'
     };

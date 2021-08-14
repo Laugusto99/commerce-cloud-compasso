@@ -27,8 +27,6 @@
 			missing-error="error.message.required"
 			parse-error="error.message.parse.cpfLucas.profile.form"
 			range-error="error.message.14orless"
-			
-			value-error="ValueErrorText"
 			type="string"/> 	
 
 		<field

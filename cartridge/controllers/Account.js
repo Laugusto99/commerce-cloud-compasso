@@ -265,7 +265,7 @@ server.post(
 
                   newCustomerProfile.firstName = registrationForm.firstName;
                   newCustomerProfile.lastName = registrationForm.lastName;
-                  newCustomerProfile.cpfLucas = registrationForm.cpfLucas;
+                  newCustomerProfile.custom.cpfLucas = registrationForm.cpfLucas;
                   newCustomerProfile.phoneHome = registrationForm.phone;
                   newCustomerProfile.email = registrationForm.email;
                 }
@@ -419,7 +419,7 @@ server.post(
       var result = {
         firstName: profileForm.customer.firstname.value,
         lastName: profileForm.customer.lastname.value,
-        cpfLucas: profileForm.customer.cpfLucas.value,
+        cpfLucas: profileForm.customer.custom.cpfLucas.value,
         phone: profileForm.customer.phone.value,
         email: profileForm.customer.email.value,
         confirmEmail: profileForm.customer.emailconfirm.value,

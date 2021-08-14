@@ -45,7 +45,7 @@
             class="form-control"
             id="registration-form-cpfLucas"
             data-missing-error="${Resource.msg('error.message.required','forms',null)}"
-            data-range-error="${Resource.msg('error.message.50orless','forms',null)}"
+            data-range-error="${Resource.msg('error.message.14orless','forms',null)}"
             aria-describedby="form-cpfLucas-error"
             <isprint value=${pdict.profileForm.customer.cpfLucas.attributes} encoding="off" />>
         <div class="invalid-feedback" id="form-cpfLucas-error"></div>
