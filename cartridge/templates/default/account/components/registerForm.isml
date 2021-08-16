@@ -261,12 +261,12 @@
         
         async function buscar(){
         const cep = document.getElementById('registration-form-cepLucas').value;
-        const url =  "https://viacep.com.br/ws/%22+cep+%22/json/";
+        const url =  "https://viacep.com.br/ws/"+cep+"/json/";
 
         const dados = await fetch(url);
         const endereco = await dados.json();
         preenchercep(endereco);
         }
-        document.getElementById('#registration-form-cepLucas')
+        document.getElementById('registration-form-cepLucas')
         .addEventListener('blur',buscar);
     </script>

@@ -28,7 +28,7 @@
 			parse-error="error.message.parse.cpfLucas.profile.form"
 			range-error="error.message.11orless"
 			type="string"/> 	
-
+			regexp="(\d{3}.?\d{3}.?\d{3}-?\d{2})"
 		<field
 			formid="gender" 
 			label="label.input.gender.profile" 
@@ -53,30 +53,30 @@
 			formid="StateLucas" 
 			label="label.input.StateLucas.profile" 
 			mandatory="true" 
-			max-length="11" 
+			max-length="40" 
 			missing-error="error.message.required"
 			parse-error="error.message.parse.StateLucas.profile.form"
-			range-error="error.message.11orless"
+			range-error="error.message.40orless"
 			type="string"/>
 
 		<field
 			formid="CityLucas" 
 			label="label.input.CityLucas.profile" 
 			mandatory="true" 
-			max-length="11" 
+			max-length="20" 
 			missing-error="error.message.required"
 			parse-error="error.message.parse.CityLucas.profile.form"
-			range-error="error.message.11orless"
+			range-error="error.message.20orless"
 			type="string"/>
 
 		<field
 			formid="StreetLucas" 
 			label="label.input.StreetLucas.profile" 
 			mandatory="true" 
-			max-length="11" 
+			max-length="30" 
 			missing-error="error.message.required"
 			parse-error="error.message.parse.StreetLucas.profile.form"
-			range-error="error.message.11orless"
+			range-error="error.message.30orless"
 			type="string"/>
 
 		<field
