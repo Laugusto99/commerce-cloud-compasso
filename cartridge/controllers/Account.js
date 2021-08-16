@@ -217,6 +217,11 @@ server.post(
         firstName: registrationForm.customer.firstname.value,
         lastName: registrationForm.customer.lastname.value,
         cpfLucas: registrationForm.customer.cpfLucas.value,
+        cepLucas: registrationForm.customer.cepLucas.value,
+        StateLucas: registrationForm.customer.StateLucas.value,
+        CityLucas: registrationForm.customer.CityLucas.value,
+        StreetLucas: registrationForm.customer.StreetLucas.value,
+        gender: registrationForm.customer.gender.value,
         phone: registrationForm.customer.phone.value,
         email: registrationForm.customer.email.value,
         emailConfirm: registrationForm.customer.emailconfirm.value,
@@ -266,6 +271,11 @@ server.post(
                   newCustomerProfile.firstName = registrationForm.firstName;
                   newCustomerProfile.lastName = registrationForm.lastName;
                   newCustomerProfile.custom.cpfLucas = registrationForm.cpfLucas;
+                  newCustomerProfile.custom.cepLucas = registrationForm.cepLucas;
+                  newCustomerProfile.custom.StateLucas = registrationForm.StateLucas;
+                  newCustomerProfile.custom.CityLucas = registrationForm.CityLucas;
+                  newCustomerProfile.custom.StreetLucas = registrationForm.StreetLucas;
+                  newCustomerProfile.gender = registrationForm.gender;
                   newCustomerProfile.phoneHome = registrationForm.phone;
                   newCustomerProfile.email = registrationForm.email;
                 }
@@ -354,6 +364,11 @@ server.get(
       profileForm.customer.firstname.value = accountModel.profile.firstName;
       profileForm.customer.lastname.value = accountModel.profile.lastName;
       profileForm.Customer.cpfLucas.value = accountModel.profile.cpfLucas;
+      profileForm.Customer.cepLucas.value = accountModel.profile.cepLucas;
+      profileForm.Customer.StateLucas.value = accountModel.profile.StateLucas;
+      profileForm.Customer.CityLucas.value = accountModel.profile.CityLucas;
+      profileForm.Customer.StreetLucas.value = accountModel.profile.StreetLucas;
+      profileForm.customer.gender.value = accountModel.profile.gender;
       profileForm.customer.phone.value = accountModel.profile.phone;
       profileForm.customer.email.value = accountModel.profile.email;
       res.render('account/profile', {
@@ -420,6 +435,11 @@ server.post(
         firstName: profileForm.customer.firstname.value,
         lastName: profileForm.customer.lastname.value,
         cpfLucas: profileForm.customer.custom.cpfLucas.value,
+        cepLucas: profileForm.customer.custom.cepLucas.value,
+        StateLucas: profileForm.customer.custom.StateLucas.value,
+        CityLucas: profileForm.customer.custom.CityLucas.value,
+        StreetLucas: profileForm.customer.custom.StreetLucas.value,
+        gender: profileForm.customer.gender.value,
         phone: profileForm.customer.phone.value,
         email: profileForm.customer.email.value,
         confirmEmail: profileForm.customer.emailconfirm.value,
@@ -464,6 +484,11 @@ server.post(
               profile.setFirstName(formInfo.firstName);
               profile.setLastName(formInfo.lastName);
               profile.setCPF(formInfo.cpfLucas);
+              profile.setGENDER(formInfo.gender);
+              profile.setCEP(formInfo.cepLucas);
+              profile.setSTATE(formInfo.StateLucas);
+              profile.setCITY(formInfo.CityLucas);
+              profile.setSTREET(formInfo.StreetLucas);
               profile.setEmail(formInfo.email);
               profile.setPhoneHome(formInfo.phone);
             });

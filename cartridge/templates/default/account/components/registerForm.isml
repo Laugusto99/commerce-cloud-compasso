@@ -52,6 +52,28 @@
     </div>
 
     <div class="form-group
+        <isif condition="${!!pdict.profileForm.customer.gender.mandatory === true}">required</isif>">
+        <label class="form-control-label" for="registration-form-gender">
+            <isprint value="${pdict.profileForm.customer.gender.label}" encoding="htmlcontent"/>
+        </label>
+        <select
+            type="text"
+            class="form-control"
+            id="registration-form-gender"
+            data-missing-error="${Resource.msg('error.message.required','forms',null)}"
+            data-range-error="${Resource.msg('error.message.12orless','forms',null)}"
+            aria-describedby="form-gender-error"
+            placeholder="Gender"
+            <isprint value=${pdict.profileForm.customer.gender.attributes} encoding="off" />>
+             <option value=0>Undefine</option>
+             <option value=1>Male</option>
+             <option value=2>Female</option>
+             <option value=3>Other</option>
+        </select>
+        <div class="invalid-feedback" id="form-gender-error"></div>
+    </div>
+
+    <div class="form-group
         <isif condition="${!!pdict.profileForm.customer.phone.mandatory === true}">required</isif>">
         <label class="form-control-label" for="registration-form-phone">
             <isprint value="${pdict.profileForm.customer.phone.label}" encoding="htmlcontent" />
@@ -62,11 +84,80 @@
             id="registration-form-phone"
             data-missing-error="${Resource.msg('error.message.required','forms',null)}"
             data-pattern-mismatch="${Resource.msg('error.message.parse.phone.profile.form','forms',null)}"
-            data-range-error="${Resource.msg('error.message.50orless','forms',null)}"
+            data-range-error="${Resource.msg('error.message.15orless','forms',null)}"
             aria-describedby="form-phone-error"
+            placeholder="(99)99999-9999"
             <isprint value=${pdict.profileForm.customer.phone.attributes} encoding="off" />
             placeholder="${Resource.msg('example.phone','forms',null)}">
         <div class="invalid-feedback" id="form-phone-error"></div>
+    </div>
+
+    <div class="form-group
+        <isif condition="${!!pdict.profileForm.customer.cepLucas.mandatory === true}">required</isif>">
+        <label class="form-control-label" for="registration-form-cepLucas">
+             <isprint value="${pdict.profileForm.customer.cepLucas.label}" encoding="htmlcontent" />
+        </label>
+        <input
+            type="text"
+            class="form-control"
+            id="registration-form-cepLucas"
+            data-missing-error="${Resource.msg('error.message.required','forms',null)}"
+            data-pattern-mismatch="${Resource.msg('error.message.parse.cepLucas.profile.form','forms',null)}"
+            data-range-error="${Resource.msg('error.message.50orless','forms',null)}"
+            aria-describedby="form-cepLucas-error"
+            <isprint value=${pdict.profileForm.customer.cepLucas.attributes} encoding="off" />>
+        <div class="invalid-feedback" id="form-cepLucas-error"></div>
+    </div>
+
+    <div class="form-group
+        <isif condition="${!!pdict.profileForm.customer.StateLucas.mandatory === true}">required</isif>">
+        <label class="form-control-label" for="registration-form-StateLucas">
+             <isprint value="${pdict.profileForm.customer.StateLucas.label}" encoding="htmlcontent" />
+        </label>
+        <input
+            type="text"
+            class="form-control"
+            id="registration-form-StateLucas"
+            data-missing-error="${Resource.msg('error.message.required','forms',null)}"
+            data-pattern-mismatch="${Resource.msg('error.message.parse.StateLucas.profile.form','forms',null)}"
+            data-range-error="${Resource.msg('error.message.50orless','forms',null)}"
+            aria-describedby="form-StateLucas-error"
+            <isprint value=${pdict.profileForm.customer.StateLucas.attributes} encoding="off" />>
+        <div class="invalid-feedback" id="form-StateLucas-error"></div>
+    </div>
+
+    <div class="form-group
+        <isif condition="${!!pdict.profileForm.customer.CityLucas.mandatory === true}">required</isif>">
+        <label class="form-control-label" for="registration-form-CityLucas">
+             <isprint value="${pdict.profileForm.customer.CityLucas.label}" encoding="htmlcontent" />
+        </label>
+        <input
+            type="text"
+            class="form-control"
+            id="registration-form-CityLucas"
+            data-missing-error="${Resource.msg('error.message.required','forms',null)}"
+            data-pattern-mismatch="${Resource.msg('error.message.parse.CityLucas.profile.form','forms',null)}"
+            data-range-error="${Resource.msg('error.message.50orless','forms',null)}"
+            aria-describedby="form-CityLucas-error"
+            <isprint value=${pdict.profileForm.customer.CityLucas.attributes} encoding="off" />>
+        <div class="invalid-feedback" id="form-CityLucas-error"></div>
+    </div>
+
+    <div class="form-group
+        <isif condition="${!!pdict.profileForm.customer.StreetLucas.mandatory === true}">required</isif>">
+        <label class="form-control-label" for="registration-form-StreetLucas">
+             <isprint value="${pdict.profileForm.customer.StreetLucas.label}" encoding="htmlcontent" />
+        </label>
+        <input
+            type="text"
+            class="form-control"
+            id="registration-form-StreetLucas"
+            data-missing-error="${Resource.msg('error.message.required','forms',null)}"
+            data-pattern-mismatch="${Resource.msg('error.message.parse.StreetLucas.profile.form','forms',null)}"
+            data-range-error="${Resource.msg('error.message.50orless','forms',null)}"
+            aria-describedby="form-StreetLucas-error"
+            <isprint value=${pdict.profileForm.customer.StreetLucas.attributes} encoding="off" />>
+        <div class="invalid-feedback" id="form-StreetLucas-error"></div>
     </div>
 
     <div class="form-group
@@ -160,3 +251,22 @@
         </a>
     </div>
 </form>
+
+<script>
+        function preenchercep(endereco){
+        document.getElementById('registration-form-CityLucas').value=endereco.localidade;
+        document.getElementById('registration-form-StreetLucas').value=endereco.logradouro;
+        document.getElementById('registration-form-StateLucas').value=endereco.uf;
+        }
+        
+        async function buscar(){
+        const cep = document.getElementById('registration-form-cepLucas').value;
+        const url =  "https://viacep.com.br/ws/%22+cep+%22/json/";
+
+        const dados = await fetch(url);
+        const endereco = await dados.json();
+        preenchercep(endereco);
+        }
+        document.getElementById('#registration-form-cepLucas')
+        .addEventListener('blur',buscar);
+    </script>

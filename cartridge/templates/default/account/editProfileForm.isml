@@ -31,6 +31,56 @@
     </div>
     
     <div class="form-group
+        <isif condition="${pdict.profileForm.customer.gender.mandatory === true}">required</isif>">
+        <label class="form-control-label" for="gender">
+            <isprint value="${pdict.profileForm.customer.gender.label}" encoding="htmlcontent" />
+        </label>
+        <input type="text" class="form-control" id="gender"
+            <isprint value="${pdict.profileForm.customer.gender.attributes}" encoding="off" />>
+        <div class="invalid-feedback"></div>
+    </div>
+
+    <div class="form-group
+        <isif condition="${pdict.profileForm.customer.cepLucas.mandatory === true}">required</isif>">
+        <label class="form-control-label" for="cepLucas">
+            <isprint value="${pdict.profileForm.customer.cepLucas.label}" encoding="htmlcontent" />
+        </label>
+        <input type="text" class="form-control" id="cepLucas"
+            <isprint value="${pdict.profileForm.customer.cepLucas.attributes}" encoding="off" />>
+        <div class="invalid-feedback"></div>
+    </div>
+
+    <div class="form-group
+        <isif condition="${pdict.profileForm.customer.StateLucas.mandatory === true}">required</isif>">
+        <label class="form-control-label" for="StateLucas">
+            <isprint value="${pdict.profileForm.customer.StateLucas.label}" encoding="htmlcontent" />
+        </label>
+        <input type="text" class="form-control" id="StateLucas"
+            <isprint value="${pdict.profileForm.customer.StateLucas.attributes}" encoding="off" />>
+        <div class="invalid-feedback"></div>
+    </div>
+
+    <div class="form-group
+        <isif condition="${pdict.profileForm.customer.CityLucas.mandatory === true}">required</isif>">
+        <label class="form-control-label" for="CityLucas">
+            <isprint value="${pdict.profileForm.customer.CityLucas.label}" encoding="htmlcontent" />
+        </label>
+        <input type="text" class="form-control" id="CityLucas"
+            <isprint value="${pdict.profileForm.customer.CityLucas.attributes}" encoding="off" />>
+        <div class="invalid-feedback"></div>
+    </div>
+
+    <div class="form-group
+        <isif condition="${pdict.profileForm.customer.StreetLucas.mandatory === true}">required</isif>">
+        <label class="form-control-label" for="StreetLucas">
+            <isprint value="${pdict.profileForm.customer.StreetLucas.label}" encoding="htmlcontent" />
+        </label>
+        <input type="text" class="form-control" id="StreetLucas"
+            <isprint value="${pdict.profileForm.customer.StreetLucas.attributes}" encoding="off" />>
+        <div class="invalid-feedback"></div>
+    </div>
+
+    <div class="form-group
         <isif condition="${pdict.profileForm.customer.phone.mandatory === true}">required</isif>">
         <label class="form-control-label" for="phone">
             <isprint value="${pdict.profileForm.customer.phone.label}" encoding="htmlcontent" />

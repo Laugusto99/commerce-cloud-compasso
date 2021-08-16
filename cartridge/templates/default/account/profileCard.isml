@@ -18,10 +18,48 @@
             <dt>${Resource.msg('label.profile.cpfLucas','account',null)}</dt>
             <dd>${pdict.account.profile.cpfLucas}</dd>
         </dl>
+
+        <dl>
+            <dt>${Resource.msg('label.profile.gender','account',null)}</dt>
+            <isif condition="${!pdict.account.profile.gender == 0}">
+                <dd>${Resource.msg('label.profile.gender.undefined','account',null)}</dd>
+            </isif>
+            <isif condition="${!pdict.account.profile.gender == 1}">
+                <dd>${Resource.msg('label.profile.gender.male','account',null)}</dd>
+            </isif>
+            <isif condition="${!pdict.account.profile.gender == 2}">
+                <dd>${Resource.msg('label.profile.gender.female','account',null)}</dd>
+            </isif>
+            <isif condition="${!pdict.account.profile.gender == 3}">
+                <dd>${Resource.msg('label.profile.gender.other','account',null)}</dd>
+            </isif>
+        </dl>
+
         <dl>
             <dt>${Resource.msg('label.profile.email','account',null)}</dt>
             <dd>${pdict.account.profile.email}</dd>
         </dl>
+
+        <dl>
+            <dt>${Resource.msg('label.profile.cepLucas','account',null)}</dt>
+            <dd>${pdict.account.profile.cepLucas}</dd>
+        </dl>
+
+        <dl>
+            <dt>${Resource.msg('label.profile.StateLucas','account',null)}</dt>
+            <dd>${pdict.account.profile.StateLucas}</dd>
+        </dl>
+
+        <dl>
+            <dt>${Resource.msg('label.profile.CityLucas','account',null)}</dt>
+            <dd>${pdict.account.profile.CityLucas}</dd>
+        </dl>
+
+        <dl>
+            <dt>${Resource.msg('label.profile.StreetLucas','account',null)}</dt>
+            <dd>${pdict.account.profile.StreetLucas}</dd>
+        </dl>
+
         <isif condition="${!pdict.account.isExternallyAuthenticated}">
             <dl>
                 <dt>${Resource.msg('label.profile.phone','account',null)}</dt>

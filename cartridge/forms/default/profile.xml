@@ -23,11 +23,61 @@
 			formid="cpfLucas" 
 			label="label.input.cpfLucas.profile" 
 			mandatory="true" 
-			max-length="14" 
+			max-length="11" 
 			missing-error="error.message.required"
 			parse-error="error.message.parse.cpfLucas.profile.form"
-			range-error="error.message.14orless"
+			range-error="error.message.11orless"
 			type="string"/> 	
+
+		<field
+			formid="gender" 
+			label="label.input.gender.profile" 
+			mandatory="true" 
+			max-length="14" 
+			missing-error="error.message.required"
+			parse-error="error.message.parse.gender.profile.form"
+			range-error="error.message.14orless"
+			type="string"/> 
+
+		<field
+			formid="cepLucas" 
+			label="label.input.cepLucas.profile" 
+			mandatory="true" 
+			max-length="11" 
+			missing-error="error.message.required"
+			parse-error="error.message.parse.cepLucas.profile.form"
+			range-error="error.message.11orless"
+			type="string"/>
+
+		<field
+			formid="StateLucas" 
+			label="label.input.StateLucas.profile" 
+			mandatory="true" 
+			max-length="11" 
+			missing-error="error.message.required"
+			parse-error="error.message.parse.StateLucas.profile.form"
+			range-error="error.message.11orless"
+			type="string"/>
+
+		<field
+			formid="CityLucas" 
+			label="label.input.CityLucas.profile" 
+			mandatory="true" 
+			max-length="11" 
+			missing-error="error.message.required"
+			parse-error="error.message.parse.CityLucas.profile.form"
+			range-error="error.message.11orless"
+			type="string"/>
+
+		<field
+			formid="StreetLucas" 
+			label="label.input.StreetLucas.profile" 
+			mandatory="true" 
+			max-length="11" 
+			missing-error="error.message.required"
+			parse-error="error.message.parse.StreetLucas.profile.form"
+			range-error="error.message.11orless"
+			type="string"/>
 
 		<field
 			formid="email" 
@@ -59,7 +109,8 @@
 			formid="phone"
 			label="label.input.phone.profile"
 			mandatory="true"
-			regexp="^\(?([2-9][0-8][0-9])\)?[\-\. ]?([2-9][0-9]{2})[\-\. ]?([0-9]{4})(\s*x[0-9]+)?$"
+			max-length="15"
+			regexp="^[0-9]{2}-?\s(([0-9]{5}-[0-9]{4})|[0-9]{8}|[0-9]{9})"
 			missing-error="error.message.required"
 			parse-error="error.message.parse.phone.profile.form"
 			type="string"/> 
